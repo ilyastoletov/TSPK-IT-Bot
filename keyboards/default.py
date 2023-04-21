@@ -3,19 +3,22 @@ from aiogram.utils.keyboard import ReplyKeyboardMarkup, ReplyKeyboardBuilder, Ke
 def start_menu() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
-        KeyboardButton(text="Абитуренту"),
+        KeyboardButton(text="Абитуриенту"),
         KeyboardButton(text="Студенту"),
+        width=2
+    )
+    builder.row(
         KeyboardButton(text="Клубы"),
         width=1
     )
     return builder.as_markup(resize_keyboard=True)
 
-def entrant_menu() -> ReplyKeyboardMarkup:
+def entrant_menu_kb() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
         KeyboardButton(text="Часто Задаваемые Вопросы"),
-        KeyboardButton(text="Подробно о колледже и IT-отделении"),
-        KeyboardButton(text="Чат группы, в которую поступил"),
+        KeyboardButton(text="Подробнее о колледже и IT-отделении"),
+        KeyboardButton(text="Чат отделения, в которое поступил"),
         KeyboardButton(text="◀️ Назад"),
         width=1
     )
@@ -29,7 +32,7 @@ def department_choose() -> ReplyKeyboardMarkup:
         width=2
     )
     builder.row(
-        KeyboardButton("◀️ Назад"),
+        KeyboardButton(text="◀️ Назад"),
         width=1
     )
     return builder.as_markup(resize_keyboard=True)
@@ -42,7 +45,7 @@ def student_menu() -> ReplyKeyboardMarkup:
         width=2
     )
     builder.row(
-        KeyboardButton("◀️ Назад"),
+        KeyboardButton(text="◀️ Назад"),
         width=1
     )
     return builder.as_markup(resize_keyboard=True)
