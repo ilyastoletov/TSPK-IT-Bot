@@ -3,7 +3,7 @@ from dotenv import dotenv_values
 dotenv_file = dotenv_values(".env")
 
 token = dotenv_file['TOKEN']
-admin = 1274013505
+admin = [1274013505]
 
 # DATABASE
 host = dotenv_file['DB_HOST']

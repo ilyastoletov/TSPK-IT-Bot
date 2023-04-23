@@ -30,3 +30,10 @@ def back_to_choose(topic: str) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.add(InlineKeyboardButton(text="◀️ Назад", callback_data=f"{topic}-back-to-choose"))
     return builder.as_markup()
+
+def post_confirmation_keyboard() -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    builder.row(InlineKeyboardButton(text="Да", callback_data="post_confirm"),
+                InlineKeyboardButton(text="Нет", callback_data="post_decline"),
+                width=2)
+    return builder.as_markup()

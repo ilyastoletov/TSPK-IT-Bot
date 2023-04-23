@@ -49,3 +49,19 @@ def student_menu() -> ReplyKeyboardMarkup:
         width=1
     )
     return builder.as_markup(resize_keyboard=True)
+
+def admin_keyboard() -> ReplyKeyboardMarkup:
+    builder = ReplyKeyboardBuilder()
+    builder.row(KeyboardButton(text="➕ Добавить вопрос"),
+                KeyboardButton(text="📊 Статистика"),
+                width=2)
+    builder.row(
+        KeyboardButton(text="📤 Рассылка"),
+        width=1
+    )
+    return builder.as_markup(resize_keyboard=True)
+
+def cancel_keyboard() -> ReplyKeyboardMarkup:
+    builder = ReplyKeyboardBuilder()
+    builder.add(KeyboardButton(text="Отмена"))
+    return builder.as_markup(resize_keyboard=True)

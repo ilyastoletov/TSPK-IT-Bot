@@ -4,6 +4,7 @@ from aiogram.filters.command import Command
 from aiogram.filters.text import Text
 from database.main import Database
 
+# TODO("Отслеживание блокировки бота")
 r = Router()
 
 @r.message(Command('start'))
